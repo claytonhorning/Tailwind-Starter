@@ -1,4 +1,4 @@
-# Tailwind-Starter
+# Tailwind Starter Project
 
 This is a basic tailwind project using Tailwind CLI.
 
