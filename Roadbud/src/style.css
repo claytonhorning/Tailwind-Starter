@@ -28,6 +28,7 @@ p {
 }
 h1 {
   font-size: 3.5em;
+  margin: 0px 10px;
 }
 .nav-wrapper {
   position: absolute;
@@ -59,6 +60,15 @@ h1 {
   bottom: 0;
   width: 100%;
 }
+#mobile-curve {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#mobile-curve circle {
+  fill: #fff;
+}
 #curve path {
   fill: #fff;
 }
@@ -68,7 +78,7 @@ h1 {
 .responsive {
   display: flex;
   justify-content: space-between;
-  margin: -7em 0;
+  margin-top: -7em;
 }
 .icons {
   display: flex;
@@ -95,6 +105,9 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.icon-row {
+  display: flex;
+}
 .icon-description {
   font-size: 0.8em;
   opacity: 0.5;
@@ -114,11 +127,11 @@ h1 {
   z-index: 1;
 }
 #phone {
-  margin-top: -12em;
+  margin-top: -15em;
   height: 700px;
 }
 #features-section {
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 50px 0px;
   background-color: #000;
   color: white;
@@ -137,7 +150,7 @@ h1 {
 .road-line {
   margin-top: 40px;
   border-left: 6px dashed #ff7a01;
-  height: 870px;
+  height: 90%;
   position: absolute;
   left: 50%;
   margin-left: -3px;
@@ -166,13 +179,14 @@ h1 {
 }
 .development-text {
   width: 50%;
-  margin: 40px auto;
+  padding: 0 15px;
+  margin: 40px 1em;
   text-align: center;
   border-radius: 25px;
 }
 .email-form {
   position: relative;
-  width: 500px;
+  width: 40%;
 }
 .email-input {
   width: 100%;
@@ -229,8 +243,99 @@ footer {
   width: 100%;
   border-bottom: 1px solid rgb(222, 222, 222);
 }
-@media screen and (min-width: 800px) {
-  .responsive-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width: 1200px) {
+  .icon-row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .icons {
+    display: block;
+  }
+  .container {
+    margin: 0 5em;
+  }
+  .responsive {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -5em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .road-line {
+    height: 120%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero-wrapper {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(./img/road.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    padding: 5em 0;
+    color: #fff;
+  }
+  #curve {
+    display: none;
+  }
+  #mobile-curve {
+    display: block;
+  }
+  h1 {
+    font-size: 2.6em;
+  }
+  .responsive {
+    margin-top: -15px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .icon-row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .icons {
+    display: block;
+  }
+  .description-column {
+    text-align: center;
+    width: 100%;
+  }
+  .container {
+    margin: 0 2em;
+  }
+  .feature-row-start {
+    width: 40%;
+  }
+  .feature-row-end {
+    margin-left: 60%;
+  }
+  .road-line {
+    height: 100%;
+  }
+  .development-text {
+    width: 100%;
+  }
+  .email-form {
+    width: 80%;
+  }
+  #phone {
+    margin-top: -20em;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  #features-section {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .road-line {
+    height: 130%;
   }
 }
